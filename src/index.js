@@ -41,7 +41,7 @@ import { postCheckSpam } from 'twikoo-func/utils/spam'
 import { sendNotice, emailTest } from 'twikoo-func/utils/notify'
 import { uploadImage } from 'twikoo-func/utils/image'
 import logger from 'twikoo-func/utils/logger'
-
+import { Resend } from 'resend';
 // 常量 / constants
 import constants from 'twikoo-func/utils/constants'
 
@@ -98,6 +98,14 @@ setCustomLibs({
 								subject,
 								content: [{ type: 'text/html', value: html }],
 							})
+						})
+					} else if (config.service.toLowerCase() === 'resend') {
+						const resend = new Resend(config.auth.pass);
+						return resend.emails.send({
+							from: from,
+							to: to,
+							subject,
+							html: html
 						})
 					}
 				}
