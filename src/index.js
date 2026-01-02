@@ -57,7 +57,7 @@ setCustomLibs({
 		createTransport(config) {
 			return {
 				verify() {
-					if (!config.service || (config.service.toLowerCase() !== 'sendgrid' && config.service.toLowerCase() !== 'mailchannels')) {
+					if (!config.service || (config.service.toLowerCase() !== 'sendgrid' && config.service.toLowerCase() !== 'mailchannels' && config.service.toLowerCase() !== 'resend')) {
 						throw new Error('仅支持 SendGrid 和 MailChannels 邮件服务。')
 					}
 					if (!config.auth || !config.auth.user) {
