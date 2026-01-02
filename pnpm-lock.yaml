@@ -12,17 +12,17 @@ importers:
         specifier: ^1.6.44
         version: 1.6.44
       url:
-        specifier: ^0.11.3
+        specifier: ^0.11.4
         version: 0.11.4
       uuid:
-        specifier: ^9.0.1
-        version: 9.0.1
+        specifier: ^13.0.0
+        version: 13.0.0
       xss:
         specifier: ^1.0.15
         version: 1.0.15
     devDependencies:
       wrangler:
-        specifier: ^3.99.0
+        specifier: ^3.114.16
         version: 3.114.16
 
 packages:
@@ -427,11 +427,6 @@ packages:
 
   acorn@8.14.0:
     resolution: {integrity: sha512-cl669nCJTZBsL97OF4kUQm5g5hC2uihk0NxY3WENAC0TYdILVkAyHymAntgxGkl7K+t0cXIrH5siy5S4XkFycA==}
-    engines: {node: '>=0.4.0'}
-    hasBin: true
-
-  acorn@8.15.0:
-    resolution: {integrity: sha512-NZyJarBfL7nWwIq+FDL6Zp/yHEhePMNnnJ0y3qfieCrmNvYct8uvtiV41UvlSe6apAfk0fY1FbWx+NwfmpvtTg==}
     engines: {node: '>=0.4.0'}
     hasBin: true
 
@@ -1588,6 +1583,10 @@ packages:
   util-deprecate@1.0.2:
     resolution: {integrity: sha512-EPD5q1uXyFxJpCrLnCc1nHnq3gOa6DZBocAIiI2TaSCA7VCJ1UJDMagCzIkXNsUYfD1daK//LTEQ8xiIbrHtcw==}
 
+  uuid@13.0.0:
+    resolution: {integrity: sha512-XQegIaBTVUjSHliKqcnFqYypAd4S+WCYt5NIeRs6w/UAry7z8Y9j5ZwRRL4kzq9U3sD6v+85er9FvkEaBpji2w==}
+    hasBin: true
+
   uuid@3.4.0:
     resolution: {integrity: sha512-HjSDRw6gZE5JMggctHBcjVak08+KEVhSIiDzFnT9S9aegmp85S/bReBVTb4QTFaRNptJ9kuYaNhnbNEOkbKb/A==}
     deprecated: Please upgrade  to version 7 or higher.  Older versions may use Math.random() in certain circumstances, which is known to be problematic.  See https://v8.dev/blog/math-random for details.
@@ -2029,8 +2028,6 @@ snapshots:
   acorn@7.4.1: {}
 
   acorn@8.14.0: {}
-
-  acorn@8.15.0: {}
 
   agent-base@4.3.0:
     dependencies:
@@ -2733,7 +2730,7 @@ snapshots:
   jsdom@16.7.0:
     dependencies:
       abab: 2.0.6
-      acorn: 8.15.0
+      acorn: 8.14.0
       acorn-globals: 6.0.0
       cssom: 0.4.4
       cssstyle: 2.3.0
@@ -3347,6 +3344,8 @@ snapshots:
       qs: 6.14.1
 
   util-deprecate@1.0.2: {}
+
+  uuid@13.0.0: {}
 
   uuid@3.4.0: {}
 
